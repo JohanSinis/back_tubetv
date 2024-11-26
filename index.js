@@ -11,7 +11,7 @@ app.use(json({ limit: '50mb' })); // Aumenta el límite para JSON
 app.use(urlencoded({ limit: '50mb', extended: true })); // Aumenta el límite para datos codificados
 
 // Configuración de CORS
-const allowedOrigins = ['https://front-notubeyet.vercel.app'];
+const allowedOrigins = ['https://front-tubetv.vercel.app'];
 app.use(cors({
     origin: (origin, callback) => {
         if (!origin || allowedOrigins.includes(origin)) {
@@ -28,7 +28,7 @@ app.get('/favicon.ico', (req, res) => res.status(204).end());
 
 // Manejador para la ruta raíz
 app.get('/', (req, res) => {
-    res.send('Bienvenido al backend de NotubeYet!');
+    res.send('Bienvenido al TubeTV!');
 });
 
 // Utiliza las rutas del sistema
